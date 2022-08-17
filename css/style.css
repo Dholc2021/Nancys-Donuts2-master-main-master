@@ -40,14 +40,12 @@
 /* endable this to add smooth scrolling */
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 
 body {
   background: #111;
   color: rgba(13, 248, 248);
   margin: 0;
-  padding: 0;
   font-family: var(--ff-primary);
   font-size: var(--fs-body);
   line-height: 1.6;
@@ -76,10 +74,8 @@ section {
 }
 
 img {
-  display: absolute;
+  display: block;
   max-width: 100%;
-  margin:0;
-  padding: 0;
 }
 
 strong {
@@ -251,7 +247,17 @@ nav {
 .section__subtitle--intro {
   display: inline-block;
 }
+#about,
+#contact,
+#donuts{
+  width:100vw;
+  height: 100vh;
+}
 
+#donuts img{
+  display: flex;
+  flex-direction:column;
+ }
 @media (min-width: 600px) {
   .intro {
     display: grid;
@@ -285,6 +291,8 @@ nav {
 /*  My services section  */
 
 .my-services {
+  display: flex;
+  flex-direction: column;
   background-color: var(--clr-dark);
   background-image: url(../img/services-bg.jpg);
   background-size: cover;
@@ -380,6 +388,7 @@ nav {
 }
 
 .portfolio {
+  margin-top: 400px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
@@ -403,36 +412,18 @@ nav {
   transform: scale(1.2);
   opacity: 0.5;
 }
-
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-  .form-label-top {
-    width: 250px !important;
-
-    font-size: 12px !important;
-  }
-
-  .form-header {
-    width: 250px !important;
-
-    font-size: 14px !important;
-  }
-}
 /* CONTACT FORM */
 
 .form-container {
+  margin-top: 400px;
   background: hsl(9deg 92% 80%);
   color: rgb(14, 99, 174);
   padding: 30px;
   border-radius: 5px;
 }
 
-label {
-  text-align:center;
-}
-
 .form-container h1 {
   text-align: center;
-  width: 15vw;
 }
 
 .form-container a {
@@ -545,18 +536,13 @@ nav ul li + li + li {
   background: #111;
   color: var(--clr-accent);
   text-align: center;
-  align-items: center;
-  justify-content: center;
   padding: 2.5em 0;
-  margin-right: 30px;
   font-size: var(--fs-h3);
 }
 
 .footer a {
   color: inherit;
   text-decoration: none;
-  margin-right: 60px;
-  padding-right: 10px;
 }
 
 .footer__link {
