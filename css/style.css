@@ -400,6 +400,20 @@ nav {
   transform: scale(1.2);
   opacity: 0.5;
 }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .form-label-top {
+    width: 250px !important;
+
+    font-size: 12px !important;
+  }
+
+  .form-header {
+    width: 250px !important;
+
+    font-size: 14px !important;
+  }
+}
 /* CONTACT FORM */
 
 .form-container {
@@ -411,7 +425,7 @@ nav {
 
 .form-container h1 {
   text-align: center;
-  width:15vw;
+  width: 15vw;
 }
 
 .form-container a {
